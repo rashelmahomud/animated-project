@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHeadphones, faKey, faLock } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faEye, faHeadphones, faKey, faLock } from '@fortawesome/free-solid-svg-icons';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -82,9 +82,9 @@ export default function LoginPage() {
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
-                    <FontAwesomeIcon icon={faKey} className="h-5 w-5 text-gray-400"/>
+                    <FontAwesomeIcon icon={faEye} className="h-5 w-5 text-gray-400"/>
                   ) : (
-                    <FontAwesomeIcon icon={faKey} className="h-5 w-5 text-gray-400"/>
+                    <FontAwesomeIcon icon={faEye} className="h-5 w-5 text-gray-400"/>
                   )}
                 </button>
               </div>

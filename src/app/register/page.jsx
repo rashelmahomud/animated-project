@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeadphones } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faEye, faHeadphones, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function Register() {
   const [name, setName] = useState('');
@@ -41,7 +41,7 @@ export default function Register() {
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                  <FontAwesomeIcon icon={faUser} className="h-5 w-5 text-gray-400"/>
                 </div>
                 <input
                   id="name"
@@ -63,7 +63,7 @@ export default function Register() {
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                   <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                   <FontAwesomeIcon icon={faEnvelope} className="h-5 w-5 text-gray-400"/>
                 </div>
                 <input
                   id="email"
@@ -85,7 +85,7 @@ export default function Register() {
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                  <FontAwesomeIcon icon={faLock} className="h-5 w-5 text-gray-400"/>
                 </div>
                 <input
                   id="password"
@@ -104,9 +104,9 @@ export default function Register() {
                   onClick={() => setShowPassword(!showPassword)}
                 >
                   {showPassword ? (
-                     <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                     <FontAwesomeIcon icon={faEye} className="h-5 w-5 text-gray-400"/>
                   ) : (
-                     <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                     <FontAwesomeIcon icon={faEye} className="h-5 w-5 text-gray-400"/>
                   )}
                 </button>
               </div>
@@ -118,7 +118,7 @@ export default function Register() {
               </label>
               <div className="mt-1 relative">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <FontAwesomeIcon icon={faHeadphones} className="h-5 w-5 text-gray-400"/>
+                  <FontAwesomeIcon icon={faLock} className="h-5 w-5 text-gray-400"/>
                 </div>
                 <input
                   id="confirmPassword"
