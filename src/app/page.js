@@ -1,12 +1,15 @@
 import Banner from "@/components/banner";
+import Magic from "@/components/magic";
 import Phone from "@/components/phone";
-
+import ProductsPage from "./products/page";
 
 const Home = () => {
   return (
     <div className="">
       <Banner />
-  <Phone />
+      <Magic />
+      <Phone />
+      <ProductsPage />
     </div>
   );
 };
