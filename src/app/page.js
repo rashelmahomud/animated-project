@@ -1,8 +1,12 @@
+import Banner from "@/components/banner";
+import Phone from "@/components/phone";
+
 
 const Home = () => {
   return (
-    <div className="h-screen">
-      <h1>This is a Home page</h1>
+    <div className="">
+      <Banner />
+  <Phone />
     </div>
   );
 };
