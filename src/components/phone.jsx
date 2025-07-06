@@ -75,8 +75,6 @@ function ParallaxText({ children, baseVelocity = 100 }) {
       directionFactor.current = 1;
     }
 
-    // Add the amplified movement based on `velocityFactor`.
-    // This makes the text speed up or slow down with scroll intensity.
     moveBy += directionFactor.current * moveBy * velocityFactor.get();
 
     // Update the `baseX` MotionValue, which in turn updates the `x` transform.
@@ -109,7 +107,7 @@ export default function App() {
       <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
 
       {/* Main content section */}
-      <section className="relative z-10 py-16 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center text-center">
+      <section className="relative z-10 py-10 px-4 md:px-8 lg:px-16 flex flex-col items-center justify-center text-center">
         <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold mb-8 leading-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
           Dynamic Scroll Effects
         </h1>
@@ -121,9 +119,7 @@ export default function App() {
 
       {/* Parallax text sections */}
       <div className="relative z-0">
-        {/* First parallax text: scrolls left (negative baseVelocity) */}
-        <ParallaxText baseVelocity={-5}>Framer Motion</ParallaxText>
-        {/* Second parallax text: scrolls right (positive baseVelocity) */}
+        <ParallaxText baseVelocity={-5}>Rashel Mahomud</ParallaxText>
         <ParallaxText baseVelocity={5}>Scroll velocity</ParallaxText>
       </div>
 
