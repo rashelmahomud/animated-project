@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
-const products = [
+import { useParams } from "next/navigation";
+    const products = [
   {
     id: 1,
     name: "iPhone 14 Pro",
@@ -9,7 +9,7 @@ const products = [
     description: "Experience the power of A16 Bionic and stunning camera.",
     price: 1199,
     quantity: 10,
-    image: "/images/iphone.jpg",
+    image: "/image/image1.jpg",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const products = [
     description: "Enjoy a sleek design and powerful performance.",
     price: 999,
     quantity: 8,
-    image: "/images/galaxy.jpg",
+    image: "/image/image2.jpg",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const products = [
     description: "Smarter photography and pure Android experience.",
     price: 899,
     quantity: 12,
-    image: "/images/pixel.jpg",
+    image: "/image/iimage3.jpg",
   },
   {
     id: 4,
@@ -36,7 +36,7 @@ const products = [
     description: "Snapdragon 8 Gen 2 with ultra-fast charging.",
     price: 849,
     quantity: 7,
-    image: "/images/oneplus.jpg",
+    image: "/image/image4.jpg",
   },
 ];
 

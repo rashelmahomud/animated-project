@@ -11,7 +11,7 @@ const ProductsPage = () => {
     description: "Experience the power of A16 Bionic and stunning camera.",
     price: 1199,
     quantity: 10,
-    image: "/images/iphone.jpg",
+    image: "/image/image1.jpg",
   },
   {
     id: 2,
@@ -20,7 +20,7 @@ const ProductsPage = () => {
     description: "Enjoy a sleek design and powerful performance.",
     price: 999,
     quantity: 8,
-    image: "/images/galaxy.jpg",
+    image: "/image/image2.jpg",
   },
   {
     id: 3,
@@ -29,7 +29,7 @@ const ProductsPage = () => {
     description: "Smarter photography and pure Android experience.",
     price: 899,
     quantity: 12,
-    image: "/images/pixel.jpg",
+    image: "/image/iimage3.jpg",
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ const ProductsPage = () => {
     description: "Snapdragon 8 Gen 2 with ultra-fast charging.",
     price: 849,
     quantity: 7,
-    image: "/images/oneplus.jpg",
+    image: "/image/image4.jpg",
   },
 ];
 
