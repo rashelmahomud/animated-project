@@ -4,6 +4,7 @@ import {motion,useScroll} from 'motion/react'
 const About = () => {
     const {scrollYProgress} = useScroll();
 
+
   return (
     <div>
 <motion.div style={{

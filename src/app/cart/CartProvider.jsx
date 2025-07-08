@@ -1,6 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState } from "react";
+import { toast } from "react-toastify";
 
 const CartContext = createContext();
 
@@ -14,11 +15,14 @@ export const CartProvider = ({ children }) => {
       const existing = prev.find((item) => item.id === product.id);
       if (existing) {
         return prev.map((item) =>
-          item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
         );
       }
       return [...prev, { ...product, quantity: 1 }];
     });
+    toast("add to cart product");
   };
 
   const removeFromCart = (id) => {

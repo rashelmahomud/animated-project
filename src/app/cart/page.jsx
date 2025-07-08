@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useCart } from "./CartProvider";
+import { toast } from "react-toastify";
 
 export default function CartPage() {
   const { cartItems, removeFromCart } = useCart();
@@ -23,6 +24,7 @@ const router = useRouter();
     cartItems.forEach((item) => removeFromCart(item.id));
 
     // Redirect to dashboard
+    toast("order confirm this product")
     router.push("/dashboard");
   };
 

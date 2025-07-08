@@ -3,6 +3,7 @@ import "./globals.css";
 import Navber from "@/shared/navber/page";
 import Footer from "@/shared/footer/page";
 import { CartProvider } from "./cart/CartProvider";
+import { ToastContainer } from "react-toastify";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navber />
+        <ToastContainer />
         <CartProvider> {children}</CartProvider>
         <Footer />
       </body>
