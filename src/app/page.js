@@ -1,6 +1,5 @@
 import Banner from "@/components/banner";
 import Magic from "@/components/magic";
-import Phone from "@/components/phone";
 import ProductsPage from "./products/page";
 
 const Home = () => {
@@ -8,7 +7,7 @@ const Home = () => {
     <div className="">
       <Banner />
       <Magic />
-      <Phone />
+      {/* <Phone /> */}
       <ProductsPage />
     </div>
   );

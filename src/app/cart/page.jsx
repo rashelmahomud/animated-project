@@ -1,14 +1,30 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useCart } from "./CartProvider";
 
 export default function CartPage() {
   const { cartItems, removeFromCart } = useCart();
-
+const router = useRouter();
   const totalPrice = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
+
+  const handleProceedToBuy = () => {
+    
+    if (cartItems.length === 0) return;
+    // Save purchased products in localStorage
+    const previous = JSON.parse(localStorage.getItem("purchasedProducts") || "[]");
+    const updated = [...previous, ...cartItems];
+    localStorage.setItem("purchasedProducts", JSON.stringify(updated));
+
+    // Optional: clear the cart
+    cartItems.forEach((item) => removeFromCart(item.id));
+
+    // Redirect to dashboard
+    router.push("/dashboard");
+  };
 
   return (
     <div className="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
@@ -80,7 +96,7 @@ export default function CartPage() {
 
             <button
               className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg text-lg font-semibold transition"
-              onClick={() => alert("Proceeding to buy...")}
+              onClick={handleProceedToBuy}
             >
               🛍️ Proceed to Buy
             </button>
