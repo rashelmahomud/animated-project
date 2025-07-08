@@ -1,4 +1,5 @@
 "use client";
+import { useCart } from "@/app/cart/CartProvider";
 import Image from "next/image";
 import { useParams } from "next/navigation";
     const products = [
@@ -45,6 +46,8 @@ const ProductId = () => {
     
 const { id } = useParams();
 
+const {addToCart} = useCart()
+
 
 
   const product = products.find((item) => item.id === parseInt(id));
@@ -79,7 +82,7 @@ const { id } = useParams();
             </div>
 
             <button
-              onClick={() => alert("Added to cart!")}
+              onClick={() => addToCart(product)}
               className="mt-6 px-5 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
             >
               Add to Cart
