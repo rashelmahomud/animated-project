@@ -1,6 +1,6 @@
 
 'use client'; 
-
+import * as motion from "motion/react-client"
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -62,18 +62,32 @@ export default function Banner() {
             />
             <div className="absolute inset-0 flex items-center justify-center p-4 text-center text-white z-10">
               <div className="max-w-2xl">
-                <h1 className="text-4xl md:text-6xl font-bold mb-4">
+
+                <motion.h1
+
+                animate={{
+                  'rotate': '360deg',
+                  y:[0,300,0]
+                }}
+                
+                className="text-4xl md:text-6xl font-bold mb-4">
                   {item.title}
-                </h1>
+                </motion.h1>
                 <p className="text-lg md:text-xl mb-8 opacity-90">
                   {item.description}
                 </p>
-                <a
+                <motion.a
+                   initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{
+                duration: 0.4,
+                scale: { type: "spring", visualDuration: 0.4, bounce: 0.5 },
+            }}
                   href={item.link}
                   className="inline-block px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-full shadow-lg transition-colors duration-300"
                 >
                   {item.buttonText}
-                </a>
+                </motion.a>
               </div>
             </div>
           </div>
