@@ -15,12 +15,12 @@ const Navbar = () => {
     { name: "Login", href: "/login" },
   ];
   return (
-    <nav className="bg-gray-800">
+    <nav className="dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo/Brand */}
           <div className="flex-shrink-0">
-            <Link href={"/"} className="text-white font-bold">YourLogo</Link>
+            <Link href={"/"} className="dark:text-white font-bold">YourLogo</Link>
           </div>
 
           {/* Desktop Menu */}
@@ -30,7 +30,7 @@ const Navbar = () => {
                 <Link
                   key={index}
                   href={nav.href}
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                  className="dark:text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                 >
                   {nav.name}
                 </Link>

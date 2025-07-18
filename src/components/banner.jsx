@@ -7,7 +7,7 @@ import { useState } from 'react';
 const carouselItems = [
   {
     id: 1,
-    image: '/image/banner.jpg', // Path to your image in the public folder
+    image: '/image/banner.png', // Path to your image in the public folder
     alt: 'Modern living room with comfortable seating',
     title: 'Discover Your Dream Home',
     description: 'Explore our curated collection of stunning properties.',
@@ -16,7 +16,7 @@ const carouselItems = [
   },
   {
     id: 2,
-    image: '/image/banner2.jpg', // Path to another image
+    image: '/image/banner2.png', // Path to another image
     alt: 'Luxury kitchen with island and modern appliances',
     title: 'Exceptional Quality & Design',
     description: 'Experience unparalleled craftsmanship and elegant interiors.',
@@ -42,7 +42,7 @@ export default function Banner() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden bg-gray-900">
+    <div className="relative w-full overflow-hidden dark:bg-gray-800">
       <div
         className="flex transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -52,7 +52,8 @@ export default function Banner() {
             key={item.id}
             className="relative flex-shrink-0 w-full h-[600px] md:h-[700px] lg:h-[800px]" // Adjust height as needed
           >
-            <Image
+         
+              <Image
               src={item.image}
               alt={item.alt}
               fill // Makes the image fill the parent container
@@ -60,7 +61,8 @@ export default function Banner() {
               priority={index === 0} // Prioritize loading the first image
               className="brightness-50" // Darken image for better text readability
             />
-            <div className="absolute inset-0 flex items-center justify-center p-4 text-center text-white z-10">
+          
+            <div className="absolute inset-0 flex items-center justify-center p-4 text-center dark:text-white text-gray-500  z-10">
               <div className="max-w-2xl">
 
                 <motion.h1

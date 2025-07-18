@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const ThemToggle = () => {
+const ThemeToggle = () => {
   const [dark, setDark] = useState(false);
 
   useEffect(() => {
@@ -27,4 +27,4 @@ const ThemToggle = () => {
   </button>;
 };
 
-export default ThemToggle;
+export default ThemeToggle;
