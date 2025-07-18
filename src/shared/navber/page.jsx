@@ -1,4 +1,5 @@
 "use client";
+import ThemToggle from "@/components/ThemeToggle";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -34,6 +35,9 @@ const Navbar = () => {
                   {nav.name}
                 </Link>
               ))}
+              <div>
+              <ThemToggle />
+            </div>
             </div>
           </div>
 
@@ -88,7 +92,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((nav, index) => (
-              <Link
+                <Link
                 key={index}
                 href="#"
                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
@@ -96,6 +100,9 @@ const Navbar = () => {
                 {nav.name}
               </Link>
             ))}
+            <div>
+              <ThemToggle />
+            </div>
           </div>
         </div>
       )}

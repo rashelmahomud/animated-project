@@ -19,7 +19,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+    <div className="min-h-screen bg-white dark:bg-gray-800 flex items-center justify-center bg-gray-50">
       <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-md">
         <div className="text-center">
           <h2 className="text-3xl font-bold text-gray-900">Sign in</h2>

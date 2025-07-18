@@ -29,8 +29,8 @@ const router = useRouter();
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen py-10 px-4 md:px-10">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">🛒 Your Cart</h1>
+    <div className="bg-gray-50 dark:bg-gray-800 min-h-screen py-10 px-4 md:px-10">
+      <h1 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">🛒 Your Cart</h1>
 
       {cartItems.length === 0 ? (
         <div className="bg-white p-6 rounded-lg shadow text-center text-gray-500">

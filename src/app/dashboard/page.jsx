@@ -28,7 +28,7 @@ export default function DashboardPage() {
 
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6 md:p-10">
+    <main className="bg-white dark:bg-gray-800 min-h-screen bg-gray-50 p-6 md:p-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-6">📊 Dashboard</h1>
 
       {/* Summary Cards */}
@@ -53,8 +53,8 @@ export default function DashboardPage() {
       </div> 
 
       {/* Recent Orders */}
-      <div className="bg-white shadow-md rounded-lg p-6">
-        <h2 className="text-xl font-semibold text-gray-700 mb-4">
+      <div className="bg-white dark:bg-gray-800 dark:text-white shadow-md rounded-lg p-6">
+        <h2 className="text-xl font-semibold text-gray-700 dark:text-white mb-4">
           Recent Orders
         </h2>
         <div className="overflow-x-auto">
